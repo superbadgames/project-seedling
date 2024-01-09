@@ -1,0 +1,29 @@
+# What is the Game?
+
+This is a platformer. You are a seed, in the dirt. When you reach the surface, at the end of the final level, you will blossom into a flower. 
+
+This is a kind game, a simple game, a nice game. This is a feel good game. This is a game where you can't die. If you fall down, you just have to try again. 
+
+Many platformers scrolls left to right, or right to left. In this one, your goal will be to always move up. 
+
+Water droplets are collected in the soil as you climb for points. The points don't really matter. It's jut a score at the end. Maybe it'll make the flower bigger or something. 
+
+# Scope
+
+10 Levels
+
+Each level should only take a few minutes to complete. Mostly jumping puzzles. There aren't any bosses.
+
+Simple enemies. 
+
+# Objective: 
+
+Personal. I want to learn how to put a game together fully. I am learning to use the godot engine, and I want to make a simple platformer to test out my skills. This is a project that I will plan and execute from scratch, with no help from videos or anything. 
+
+This game is for Stephelena. I saw a vision of this when I was baked and looking for inspiration. I told her about it a long time ago, it's time to get it done. 
+
+# Narrative Take:
+
+Once, there was a forest sprite. This sprite first opened it's little eyes to complete darkness. The first sensation the little sprite had was one of pure joy. Laying, for an untold time in the soil, the little sprite had been completely inert, just waiting for the time to awaken and grow. 
+
+The little sprite didn't how long it had waited, but it sure did feel like it had been a long time. A tiny drop of water had awaken the sprite, and
