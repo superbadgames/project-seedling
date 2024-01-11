@@ -8,14 +8,17 @@ const move_speed : float = 125.0
 const jump_power : float = 100.0
 
 onready var animatedSprite = $AnimatedSprite
+onready var movement = $Movement
 
 var move_velocity : Vector2 = Vector2.ZERO
 var can_jump : bool = true
 
 
 func _process(delta):
-	move()
+	move_velocity = movement.move(move_velocity)
+	jump_check()
 	apply_gravity()
+	animate()
 	# VERY IMPORTANT!
 	# Without saving the return value from move_and_slide, is_on_floor will
 	# in correctly return. 
@@ -32,27 +35,23 @@ func apply_gravity():
 	elif not can_jump :
 		can_jump = true
 
-
-func move():
-	# Change x and y values of move_velocity independently.
-	# Compute X value
-	if Input.is_action_pressed("move_right"):
-		print("move right")
-		move_velocity.x = Vector2.RIGHT.x
-		animatedSprite.play("walk")
-		animatedSprite.flip_h = false
-	elif Input.is_action_pressed("move_left"):
-		print("move left")
-		move_velocity.x = Vector2.LEFT.x
-		animatedSprite.play("walk")
-		animatedSprite.flip_h = true
-	else:
-		move_velocity.x = Vector2.ZERO.x
-		animatedSprite.play("idle")
-	
+func jump_check():
 	# Compute Y value
 	if Input.is_action_pressed("jump") and can_jump:
 		move_velocity.y = -jump_power
-		animatedSprite.play("jump")
 		can_jump = false
 
+
+func animate():
+	if move_velocity.x != 0 :
+		animatedSprite.play("walk")
+		# false == moving right
+		# true == moving left
+		if move_velocity.x > 0:
+			animatedSprite.flip_h = false
+		elif move_velocity.x < 0: 
+			animatedSprite.flip_h = true
+	if move_velocity.y < 0 :
+		animatedSprite.play("jump")
+	if move_velocity == Vector2.ZERO:
+		animatedSprite.play("idle")
