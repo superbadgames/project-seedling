@@ -5,7 +5,7 @@ const GRAVITY : float = 3.0
 # 100 felt too slow, 150 too fast, maybe change later when there are levels to
 # test
 const move_speed : float = 125.0
-const jump_power : float = 100.0
+const jump_power : float = 200.0
 
 onready var animatedSprite = $AnimatedSprite
 onready var movement = $Movement
@@ -15,7 +15,7 @@ var can_jump : bool = true
 
 
 func _process(delta):
-	move_velocity = movement.move(move_velocity)
+	move_velocity.x = movement.move(move_velocity).x
 	jump_check()
 	apply_gravity()
 	animate()
@@ -28,7 +28,6 @@ func _process(delta):
 func apply_gravity():
 	# falling, need gravity
 	if not is_on_floor():
-		print("falling!")
 		move_velocity.y = GRAVITY
 		can_jump = false
 	# on floor, maybe we jumped?
@@ -43,15 +42,15 @@ func jump_check():
 
 
 func animate():
-	if move_velocity.x != 0 :
+	if Input.is_action_pressed("move_right") :
 		animatedSprite.play("walk")
-		# false == moving right
-		# true == moving left
-		if move_velocity.x > 0:
-			animatedSprite.flip_h = false
-		elif move_velocity.x < 0: 
-			animatedSprite.flip_h = true
-	if move_velocity.y < 0 :
-		animatedSprite.play("jump")
-	if move_velocity == Vector2.ZERO:
+		animatedSprite.flip_h = false
+	elif Input.is_action_pressed("move_left"):
+		animatedSprite.play("walk")
+		animatedSprite.flip_h = true
+	else:
 		animatedSprite.play("idle")
+	
+	if Input.is_action_pressed("jump") :
+		print("jump!")
+		animatedSprite.play("jump")

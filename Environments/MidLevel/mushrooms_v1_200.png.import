@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/platform_v1-Sheet.png-4d69f61c984bfe18d5ab2b5f1badba9a.stex"
+path="res://.import/mushrooms_v1_200.png-1ffcf81a346a8677b53025f0377deb62.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Raw/platform_v1-Sheet.png"
-dest_files=[ "res://.import/platform_v1-Sheet.png-4d69f61c984bfe18d5ab2b5f1badba9a.stex" ]
+source_file="res://Environments/MidLevel/mushrooms_v1_200.png"
+dest_files=[ "res://.import/mushrooms_v1_200.png-1ffcf81a346a8677b53025f0377deb62.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
