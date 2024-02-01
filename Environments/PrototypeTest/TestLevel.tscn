@@ -1,27 +1,113 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Entities/Characters/Seedling/Seedling.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Environments/PrototypeTest/platforms_v2_100.tres" type="TileSet" id=2]
-[ext_resource path="res://Environments/PrototypeTest/platforms_v2.tres" type="TileSet" id=3]
+[ext_resource path="res://Components/Platforms/Testing/Platform_Test_16x16.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Components/Platforms/Testing/Platform_Test_32x16.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Components/Platforms/Testing/Platform_Test_64x16.tscn" type="PackedScene" id=6]
 
 [node name="TestLevel" type="Node2D"]
-
-[node name="TileMap_200" type="TileMap" parent="."]
-visible = false
-scale = Vector2( 2, 2 )
-tile_set = ExtResource( 3 )
-cell_size = Vector2( 16, 16 )
-cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
-format = 1
-tile_data = PoolIntArray( 131073, 0, 0, 131075, 1, 0, 131077, 1, 0, 131079, 1, 0, 131081, 2, 0, 262145, 3, 0, 262147, 4, 0, 262149, 4, 0, 262151, 4, 0, 262153, 5, 0, 327697, 0, 0, 327699, 1, 0, 327701, 1, 0, 327703, 2, 0, 458769, 3, 0, 458771, 4, 0, 458773, 4, 0, 458775, 5, 0, 655372, 0, 0, 655374, 1, 0, 655376, 1, 0, 655378, 2, 0, 786444, 3, 0, 786446, 4, 0, 786448, 4, 0, 786450, 5, 0, 983041, 0, 0, 983043, 1, 0, 983045, 1, 0, 983047, 1, 0, 983049, 2, 0, 1048590, 0, 0, 1048592, 1, 0, 1048594, 1, 0, 1048596, 1, 0, 1048598, 2, 0, 1114113, 3, 0, 1114115, 4, 0, 1114117, 4, 0, 1114119, 4, 0, 1114121, 5, 0, 1179662, 3, 0, 1179664, 4, 0, 1179666, 4, 0, 1179668, 4, 0, 1179670, 5, 0 )
-
-[node name="TileMap_100" type="TileMap" parent="."]
-visible = false
-tile_set = ExtResource( 2 )
-cell_size = Vector2( 32, 32 )
-format = 1
-tile_data = PoolIntArray( 327685, 0, 0 )
 
 [node name="Seedling" parent="." instance=ExtResource( 1 )]
 position = Vector2( 84.6866, 23.0268 )
 scale = Vector2( 5, 5 )
+
+[node name="Test_Platforms2" type="Node2D" parent="."]
+
+[node name="Platform_Test_16x16" parent="Test_Platforms2" instance=ExtResource( 4 )]
+position = Vector2( 86.876, 96.4111 )
+
+[node name="Platform_Test_16x17" parent="Test_Platforms2" instance=ExtResource( 4 )]
+position = Vector2( 3145.52, 1057.29 )
+
+[node name="Platform_Test_16x18" parent="Test_Platforms2" instance=ExtResource( 4 )]
+position = Vector2( 2979.03, 985.938 )
+
+[node name="Platform_Test_16x19" parent="Test_Platforms2" instance=ExtResource( 4 )]
+position = Vector2( 2826.81, 926.477 )
+
+[node name="Platform_Test_16x20" parent="Test_Platforms2" instance=ExtResource( 4 )]
+position = Vector2( 2650.81, 859.882 )
+
+[node name="Platform_Test_16x21" parent="Test_Platforms2" instance=ExtResource( 4 )]
+position = Vector2( 2486.7, 786.151 )
+
+[node name="Platform_Test_32x16" parent="Test_Platforms2" instance=ExtResource( 5 )]
+position = Vector2( 321.017, 339.028 )
+
+[node name="Platform_Test_64x16" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 670.64, 549.861 )
+
+[node name="Platform_Test_64x17" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 1064.18, 603.679 )
+
+[node name="Platform_Test_64x18" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 1619.17, 492.68 )
+
+[node name="Platform_Test_64x19" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 2167.44, 741.586 )
+
+[node name="Platform_Test_64x20" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 142.557, 1275 )
+
+[node name="Platform_Test_64x21" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 464.153, 1275 )
+
+[node name="Platform_Test_64x22" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 784.145, 1275 )
+
+[node name="Platform_Test_64x23" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 1103.75, 1275 )
+
+[node name="Platform_Test_64x24" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 1423.04, 1275 )
+
+[node name="Platform_Test_64x25" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 1743.36, 1275 )
+
+[node name="Platform_Test_64x26" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 2063.52, 1275 )
+
+[node name="Platform_Test_64x27" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 2383.46, 1275 )
+
+[node name="Platform_Test_64x28" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 2703.59, 1275 )
+
+[node name="Platform_Test_64x29" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 3343.13, 1275 )
+
+[node name="Platform_Test_64x30" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 3023.24, 1275 )
+
+[node name="Platform_Test_64x31" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 142.557, 1275 )
+
+[node name="Platform_Test_64x32" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 464.153, 1275 )
+
+[node name="Platform_Test_64x33" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 784.145, 1275 )
+
+[node name="Platform_Test_64x34" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 1103.75, 1275 )
+
+[node name="Platform_Test_64x35" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 1423.04, 1275 )
+
+[node name="Platform_Test_64x36" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 1743.36, 1275 )
+
+[node name="Platform_Test_64x37" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 2063.52, 1275 )
+
+[node name="Platform_Test_64x38" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 2383.46, 1275 )
+
+[node name="Platform_Test_64x39" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 2703.59, 1275 )
+
+[node name="Platform_Test_64x40" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 3343.13, 1275 )
+
+[node name="Platform_Test_64x41" parent="Test_Platforms2" instance=ExtResource( 6 )]
+position = Vector2( 3023.24, 1275 )
